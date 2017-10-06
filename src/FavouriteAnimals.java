@@ -43,7 +43,7 @@ public class FavouriteAnimals {
                     line = br.readLine();
                 }
         }catch (IOException e) {
-            System.out.println("Can't find Tasks.txt.");
+            System.out.println("Can't find the txt file");
         }
         return in;
     }

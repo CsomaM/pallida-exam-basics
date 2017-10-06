@@ -1,0 +1,8 @@
+dog
+cat
+bird
+opossum
+cow
+horse
+rat
+parrot

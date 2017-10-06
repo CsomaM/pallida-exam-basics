@@ -15,9 +15,9 @@
 
 # Tasks
 ## 1-3. Complete the following tasks: (~90 mins)
-- [Uniques Characters](uniquechars/UniqueChars.java)
-- [Favourite Animals](favouriteanimals/FavouriteAnimals.java)
-- [Candy Shop](candyshop/TakeMeToThe.java)
+- [Uniques Characters](src/UniqueChars.java)
+- [Favourite Animals](src/FavouriteAnimals.java)
+- [Candy Shop](src/TakeMeToThe.java)
 
 ### Acceptance criteria
 The application is accepted if:

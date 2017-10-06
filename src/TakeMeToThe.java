@@ -40,4 +40,5 @@ public class TakeMeToThe {
         // Should print out:
         // "Invetory: 1 candies, 1 lollipops, Income: 5$, Sugar: 315gr"
     }
+
 }

@@ -1,30 +1,32 @@
 public class CandyShop {
 
     static int sugarAmount;
-    static String CANDY = "candy";
-    static String LOLLIPOP = "lollipop";
     static int lollipopAmount = 0;
     static int candyAmount = 0;
     static int income = 0;
     static int plusMoney = 0;
+    static Candy CANDY = new Candy();;
+    static Lollipop LOLLIPOP = new Lollipop();
 
     public CandyShop (int sugar) {
         this.sugarAmount = sugar;
     }
 
-    static void createSweets (String s) {
-        if (s.equals("candy")) {
-            candy();
-        } else if (s.equals("lollipop")){
-            lollipop();
+    static void createSweets (CandyShop c) {
+        if (c instanceof Candy) {
+            sugarAmount -= Candy.cost;
+            candyAmount++;
+        } else if (c instanceof Lollipop){
+            sugarAmount -= Lollipop.cost;
+            lollipopAmount++;
         }
     }
 
-    static void sell (String s, int amount) {
-        if (s.equals("candy")) {
+    static void sell (CandyShop c, int amount) {
+        if (c instanceof Candy) {
             candyAmount --;
             income += 20 + plusMoney;
-        } else if (s.equals("lollipop")){
+        } else if (c instanceof Lollipop){
             lollipopAmount --;
             income += 10 + plusMoney;
         }
@@ -39,17 +41,8 @@ public class CandyShop {
         sugarAmount += amount;
     }
 
-    static void candy () {
-        sugarAmount -= 10;
-        candyAmount ++;
-    }
-
-    static void lollipop () {
-        sugarAmount -= 5;
-        lollipopAmount ++;
-    }
-
     public String toString () {
-        return "Invertory: " + candyAmount + " candies " + lollipopAmount + " lollipops, Income: " + income + " Sugar: " + sugarAmount;
+        return "Inventory: " + candyAmount + " candies " + lollipopAmount + " lollipops, Income: " + income + " Sugar: " + sugarAmount;
     }
+
 }

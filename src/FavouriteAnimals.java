@@ -56,4 +56,5 @@ public class FavouriteAnimals {
             System.out.println("Can't find the txt file");
         }
     }
+
 }
